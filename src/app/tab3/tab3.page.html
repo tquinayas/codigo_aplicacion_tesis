@@ -1,0 +1,23 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar >
+  <ion-title >
+      GALERÍA
+
+    </ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let photo of photos; index as position" >
+        <ion-img src="{{photo.base64 ? photo.base64 : photo.webviewPath}}"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+</ion-content>
